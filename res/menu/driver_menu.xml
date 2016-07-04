@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:name="refresh"
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh_24_px"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+    <item
+        android:name="expanded_menu"
+        android:id="@+id/expanded_menu"
+        android:icon="@drawable/ic_menu_24px"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile">
+    </item>
+</menu>

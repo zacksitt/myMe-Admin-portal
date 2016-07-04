@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ScheduleDisplay" >
+
+    <TextView
+        android:id="@+id/bvr_rcd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bvr_rcd"
+        android:textSize="26dp"
+        android:textColor="@color/ColorPrimary"
+        />
+
+    <ImageButton
+        android:id="@+id/closeicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:backgroundTintMode="screen"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="close"
+        />
+
+    <TextView
+        android:id="@+id/stuLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/student"
+        android:layout_alignParentLeft="true"
+        android:text="@string/student"
+        android:textSize="20dp"
+        android:textColor="#333"
+        />
+
+    <TextView
+        android:id="@+id/student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/student"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/closeicon"
+        android:layout_marginLeft="130dp"
+        android:textColor="@color/mygrey"
+        android:textSize="20dp"
+        android:padding="3dp"
+        />
+
+    <RelativeLayout
+    android:id="@+id/absentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/student">
+
+    <ListView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/commantList" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/comment_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/comment"
+        android:onClick="submit"
+        android:layout_below="@+id/comment"/>
+
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/optionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/student"
+    >
+
+    <Button
+        android:id="@+id/present"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/present"
+        android:onClick="present"
+        android:background="@color/lightblue"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/absent"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/present"
+        android:text="@string/absent"
+        android:onClick="absent"
+        android:background="#ae2b2b"
+        android:textColor="@color/white"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/atdLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/student"
+        >
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next"
+        android:layout_marginTop="10dp"
+        android:id="@android:id/list" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/next"
+        android:onClick="next"/>
+</RelativeLayout>
+
+        </RelativeLayout>

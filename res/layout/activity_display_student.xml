@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/display_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+    </android.support.v7.widget.Toolbar>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eunovate.eunovatedev.myapp.DisplayContact">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="100dp"
+            android:ems="13"
+            android:inputType="text"
+            android:backgroundTint="@color/tabsScrollColor">
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/editTextDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spnrGender"
+            android:layout_below="@+id/spnrGender"
+            android:layout_marginTop="0dp"
+            android:ems="13"
+            android:inputType="date">
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ex : 1989-02-22"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignLeft="@+id/editTextDateOfBirth"
+            android:layout_below="@+id/editTextDateOfBirth"/>
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextName"
+            android:layout_alignParentLeft="true"
+            android:text="@string/name"
+            android:textSize="15dp"
+            android:textColor="#333"/>
+
+
+        <TextView
+            android:id="@+id/textViewDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextDateOfBirth"
+            android:layout_alignLeft="@+id/textViewAddress"
+            android:text="@string/dob"
+            android:textSize="15dp"
+            android:backgroundTint="@color/tabsScrollColor"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextAddress"
+            android:layout_alignLeft="@+id/textViewName"
+            android:text="@string/address"
+            android:textSize="15dp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/textViewGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spnrGender"
+            android:layout_alignLeft="@+id/textViewAddress"
+            android:text="@string/gender"
+            android:textSize="15dp"
+            android:textColor="#333"/>
+
+
+        <Spinner
+            android:id="@+id/spnrGender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_alignLeft="@+id/editTextName"
+            android:layout_below="@+id/editTextAddress"
+            android:prompt="@string/spinner_title"/>
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spnrGender"
+            android:layout_below="@+id/editTextName"
+            android:ems="13"
+            android:inputType="text"
+            android:backgroundTint="@color/tabsScrollColor">
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewFN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextFatherName"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editTextDateOfBirth"
+            android:text="@string/fanthername"
+            android:textSize="15dp"
+            android:textColor="#333"/>
+
+        <EditText
+            android:id="@+id/editTextFatherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextDateOfBirth"
+            android:layout_below="@+id/editTextDateOfBirth"
+            android:ems="13"
+            android:layout_marginTop="5dp"
+            android:inputType="text" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewFNC"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/editTextFatherNrcNo"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/editTextFatherName"-->
+            <!--android:text="@string/fathernrc"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="#333"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextFatherNrcNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/editTextFatherName"-->
+            <!--android:layout_below="@+id/editTextFatherName"-->
+            <!--android:ems="13"-->
+            <!--android:inputType="text" />-->
+
+        <TextView
+            android:id="@+id/textViewMN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextMotherName"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/editTextDateOfBirth"
+            android:text="@string/mothername"
+            android:textSize="15dp"
+            android:textColor="#333"/>
+
+        <EditText
+            android:id="@+id/editTextMotherName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextFatherName"
+            android:layout_below="@+id/editTextFatherName"
+            android:ems="13"
+            android:inputType="text" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewMNC"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/editTextMotherNrcNo"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/editTextMotherNrcNo"-->
+            <!--android:text="@string/mothernrc"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="#333"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextMotherNrcNo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/editTextMotherName"-->
+            <!--android:layout_below="@+id/editTextMotherName"-->
+            <!--android:ems="13"-->
+            <!--android:inputType="text" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewContact"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/editTextContact"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/editTextMotherNrcNo"-->
+            <!--android:text="@string/contact"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="#333"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextContact"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/editTextMotherNrcNo"-->
+            <!--android:layout_below="@+id/editTextMotherNrcNo"-->
+            <!--android:ems="13"-->
+            <!--android:inputType="text" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewRemark"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/editTextRemark"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/editTextRemark"-->
+            <!--android:text="@string/remark"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="#333"/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextRemark"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/editTextContact"-->
+            <!--android:layout_below="@+id/editTextContact"-->
+            <!--android:ems="13"-->
+            <!--android:inputType="text" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewNRC"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@+id/editTextNRC"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_toLeftOf="@+id/editTextNRC"-->
+            <!--android:text="@string/nrcno"-->
+            <!--android:textSize="15dp"-->
+            <!--android:textColor="#333" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/editTextNRC"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignLeft="@+id/editTextRemark"-->
+            <!--android:layout_below="@+id/editTextRemark"-->
+            <!--android:ems="13"-->
+            <!--android:inputType="text" />-->
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/editTextMotherName"
+            android:onClick="run"
+            android:textAllCaps="false"
+            android:layout_marginTop="35dp"
+            android:background="@color/lightblue"
+            android:textColor="@color/white"
+            android:text="@string/save"/>
+        </RelativeLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".ScheduleDisplay">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/display_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        >
+
+        <TextView
+        android:id="@+id/classLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/class_name"
+        android:layout_alignParentLeft="true"
+        android:text="@string/class_name"
+        android:textSize="16dp"
+        android:textColor="#333"
+        />
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/class_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="130dp"
+        android:textColor="@color/mygrey"
+        android:textSize="16dp"
+        android:padding="3dp"
+
+        />
+    <TextView
+        android:id="@+id/townshipLBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/township"
+        android:layout_alignParentLeft="true"
+        android:text="@string/township"
+        android:textSize="16dp"
+        android:textColor="#333"
+        />
+
+    <TextView
+        android:id="@+id/township"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city"
+        android:text="@string/location"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:textColor="@color/mygrey"
+        android:layout_alignLeft="@+id/class_name"
+        android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/cityLBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/city"
+            android:layout_alignParentLeft="true"
+            android:text="@string/city"
+            android:textSize="16dp"
+            android:textColor="#333"
+            />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/class_name"
+            android:text="@string/city"
+            android:layout_marginTop="15dp"
+            android:padding="3dp"
+            android:textColor="@color/mygrey"
+            android:layout_alignLeft="@+id/class_name"
+            android:textSize="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/vehicle"
+        android:layout_alignParentLeft="true"
+        android:text="@string/vehicle"
+        android:textSize="16dp"
+        android:textColor="#333"
+        />
+
+    <TextView
+        android:id="@+id/vehicle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/township"
+        android:text="@string/vehicle"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:textColor="@color/mygrey"
+        android:layout_alignLeft="@+id/township"
+        android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/caddresLBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/caddress"
+            android:text="@string/caddress"
+            android:textSize="16dp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/caddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vehicle"
+            android:text="@string/caddress"
+            android:layout_marginTop="15dp"
+            android:layout_alignLeft="@+id/vehicle"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/cphoneLBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cphone"
+            android:text="@string/cphone"
+            android:textSize="16dp"
+            android:textColor="#333"/>
+
+        <TextView
+            android:id="@+id/cphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/caddress"
+            android:text="@string/cphone"
+            android:layout_marginTop="15dp"
+            android:layout_alignLeft="@+id/vehicle"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:id="@+id/stu_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_below="@+id/vehicle" />
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/cphone">
+    <Button
+        android:id="@+id/schubtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/lightblue"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="25dp"
+        android:layout_weight=".2"
+        android:layout_marginLeft="1dp"
+        android:textColor="@color/white"
+        android:text="@string/schedulebtn"
+        android:onClick="getSchu"/>
+
+    <Button
+        android:id="@+id/stubtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_weight=".2"
+        android:background="@color/lightblue"
+        android:layout_toEndOf="@+id/schubtn"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="1dp"
+        android:drawablePadding="-55sp"
+        android:textColor="@color/white"
+        android:onClick="getStu"
+        android:text="@string/stubtn"/>
+</TableRow>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tableRow1"
+        >
+
+        <ListView
+            android:id="@+id/my_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"></ListView>
+    </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

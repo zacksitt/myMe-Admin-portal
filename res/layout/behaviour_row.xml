@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:descendantFocusability="beforeDescendants">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:descendantFocusability="afterDescendants">
+
+
+        <TextView
+            android:id="@+id/behaviour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Work"
+            android:paddingTop="5dp"
+            android:textColor="#1d1d1d"
+
+            android:textSize="17dp"
+            android:layout_marginLeft="5dp"/>
+
+        <RadioGroup
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/bvr_radio_gup"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/behaviour"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_marginRight="5dp"
+                android:onClick="rated"/>
+            <RadioButton android:id="@+id/radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="2"
+                android:onClick="rated"/>
+            <RadioButton android:id="@+id/radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:checked="true"
+                android:text="3"
+                android:onClick="rated"/>
+            <RadioButton android:id="@+id/radio_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="4"
+                android:onClick="rated"/>
+            <RadioButton android:id="@+id/radio_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:onClick="rated"/>
+        </RadioGroup>
+
+        <!--<RatingBar-->
+            <!--android:id="@+id/ratingBar1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:stepSize="1"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/label"-->
+            <!--android:paddingLeft="25px"-->
+            <!--android:paddingRight="2px"-->
+            <!--android:paddingTop="2px"-->
+            <!--android:textSize="22sp"-->
+            <!--android:text="hehaviour"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+        </RelativeLayout>
+    </FrameLayout>

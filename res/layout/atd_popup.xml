@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical"
+        android:padding="3dp" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/shade"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/popup_title"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/centerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/footer"
+            android:layout_below="@+id/header"
+            android:gravity="center" >
+
+            <ListView
+                android:id="@+id/bvr_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+            <ListView
+                android:id="@+id/cmt_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_margin="15dp"
+                android:lines="5"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#cecece"
+            android:gravity="center"
+            android:padding="10dip" >
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/ColorPrimaryDark"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:text="@string/save"
+                android:onClick="atd_ok"/>
+
+            <Button
+                android:id="@+id/cancelbtutton"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/lightblue"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/saveBtn"
+                android:text="@string/cancel"
+                android:onClick="atd_cancel"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

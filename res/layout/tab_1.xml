@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dfdfdf">
+
+    <ListView
+        android:id="@+id/scheList"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:listSelector="#ecebeb"
+        android:cacheColorHint="#b61e1e"
+        android:divider="#dfdfdf"
+        android:dividerHeight="7dp"
+        android:padding="7dp"></ListView>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/today"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:onClick="get_by_day"
+        android:layout_weight=".3"
+        android:textAllCaps="false"
+        android:background="@color/lightblue"
+        android:layout_width="match_parent"
+        android:text="@string/today"/>
+
+    <Button
+        android:id="@+id/week"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight=".3"
+        android:layout_marginLeft="1dp"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="@color/lightblue"
+        android:text="@string/week"/>
+
+    <Button
+        android:id="@+id/month"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight=".3"
+        android:layout_marginLeft="1dp"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:background="@color/lightblue"
+        android:onClick="get_by_month"
+        android:text="@string/month"/>
+    </TableRow>
+</RelativeLayout>

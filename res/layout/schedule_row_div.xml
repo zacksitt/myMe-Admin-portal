@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:descendantFocusability="beforeDescendants">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/back_shadow"
+        android:descendantFocusability="afterDescendants">
+
+        <TextView
+            android:id="@+id/cname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="#313131"
+            android:text="Class Name"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:textColor="#313131"
+            android:text="Date"
+            android:textSize="15dp"
+            android:layout_toEndOf="@+id/cname"
+            android:layout_marginStart="16dp" />
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:textColor="#313131"-->
+            <!--android:text="("-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_toEndOf="@+id/date"-->
+            <!--android:layout_marginStart="6dp" />-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:textColor="#313131"-->
+            <!--android:text=")"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_toEndOf="@+id/etime"-->
+            <!--android:layout_marginStart="6dp" />-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:textColor="#313131"-->
+            <!--android:text="-"-->
+            <!--android:textSize="17dp"-->
+            <!--android:layout_toEndOf="@+id/stime"-->
+            <!--android:layout_marginStart="4dp" />-->
+        <!--<TextView-->
+            <!--android:id="@+id/stime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:textColor="#616161"-->
+            <!--android:text="7:00"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_toEndOf="@+id/date"-->
+            <!--android:layout_marginStart="14dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/etime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:textColor="#616161"-->
+            <!--android:text="9:30"-->
+            <!--android:textSize="15dp"-->
+            <!--android:layout_toEndOf="@+id/stime"-->
+            <!--android:layout_marginStart="14dp" />-->
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cname"
+            android:text="Location"
+            android:textColor="#616161"
+            android:textSize="15dp"/>
+        <TextView
+            android:id="@+id/bus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bus"
+            android:textColor="#616161"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:layout_alignTop="@+id/location"
+            android:layout_toRightOf="@+id/location"/>
+
+        <TextView
+            android:id="@+id/schedule_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lesson"
+            android:textColor="#616161"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:visibility="invisible"
+            android:layout_alignTop="@+id/course"
+            android:layout_toRightOf="@+id/lesson"/>
+
+    </RelativeLayout>
+</FrameLayout>

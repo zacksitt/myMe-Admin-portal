@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddVehicleMaintenance_Activity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/display_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="16dp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:prompt="@string/spinner_title"/>
+
+            <CheckBox android:id="@+id/chk_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/spinner"
+                android:text="@string/oil"
+                />
+
+            <CheckBox android:id="@+id/chk_coolant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coolant"
+                android:layout_below="@+id/chk_oil"
+                />
+
+            <CheckBox android:id="@+id/chk_air"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/air"
+                android:layout_below="@+id/chk_coolant"/>
+
+            <CheckBox android:id="@+id/chk_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/serice"
+                android:layout_below="@+id/chk_air"/>
+
+            <CheckBox android:id="@+id/chk_wheel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wheel"
+                android:layout_below="@+id/chk_service"/>
+
+            <CheckBox android:id="@+id/chk_engine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/engoil"
+                android:layout_toRightOf="@+id/chk_oil"
+                android:layout_toEndOf="@+id/chk_oil"
+                android:layout_alignBaseline="@+id/chk_oil"
+                android:layout_marginLeft="105dp"/>
+
+            <CheckBox android:id="@+id/chk_carbdy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/chk_coolant"
+                android:layout_below="@+id/chk_engine"
+                android:text="@string/carbdy"
+                android:layout_alignLeft="@+id/chk_engine"/>
+
+            <CheckBox android:id="@+id/chk_brake"
+                android:layout_width="wrap_content"
+                android:layout_alignBaseline="@+id/chk_air"
+                android:layout_height="wrap_content"
+                android:text="@string/brake"
+                android:layout_below="@+id/chk_carbdy"
+                android:layout_alignLeft="@+id/chk_engine"/>
+
+                <!--android:onClick="onCheckboxClicked"-->
+            <CheckBox android:id="@+id/chk_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/light"
+                android:layout_alignBaseline="@+id/chk_service"
+                android:layout_below="@+id/chk_brake"
+                android:layout_alignLeft="@+id/chk_engine"/>
+
+            <CheckBox android:id="@+id/chk_fblight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fblight"
+                android:layout_alignBaseline="@+id/chk_wheel"
+                android:layout_below="@+id/chk_light"
+                android:layout_alignLeft="@+id/chk_engine"/>
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:gravity="top"
+                android:layout_marginTop="25dp"
+                android:hint="@string/comment"
+                android:layout_below="@id/chk_wheel"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_below="@+id/comment"
+                android:layout_marginTop="55dp"
+                android:textAllCaps="false"
+                android:onClick="save"/>
+        </RelativeLayout>
+
+    </LinearLayout>

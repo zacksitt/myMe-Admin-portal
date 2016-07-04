@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:textColor="#181818"
+        android:text="Student Name"
+        android:textSize="17dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"/>
+    <TextView
+        android:id="@+id/stu_id"
+        android:text="ID"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_toEndOf="@+id/name"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:text="locaion"
+       android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/atd_ok_btn"
+        android:layout_width="44dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#fff"
+        android:layout_marginTop="3dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_check_btn"
+        android:layout_alignParentRight="true"
+        android:onClick="attendance"/>
+    <Button
+        android:id="@+id/atd_absent_btn"
+        android:layout_width="44dp"
+        android:backgroundTint="#fff"
+        android:layout_marginRight="3dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/atd_ok_btn"
+        android:layout_toStartOf="@+id/atd_ok_btn"
+        android:drawableLeft="@drawable/ic_remove_btn"
+        android:onClick="attendance"
+        />
+    <TextView
+        android:id="@+id/finished_txt"
+        android:layout_width="wrap_content"
+        android:text="Recorded"
+        android:visibility="invisible"
+        android:textColor="@color/tabsScrollColor"
+        android:layout_alignBaseline="@+id/atd_ok_btn"
+        android:layout_alignLeft="@+id/atd_absent_btn"
+        android:textSize="15dp"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
